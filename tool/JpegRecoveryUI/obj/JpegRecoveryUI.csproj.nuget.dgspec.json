@@ -1,0 +1,149 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Mec\\Downloads\\file_carver\\file_carver\\tool\\src\\JpegRecoveryUI\\JpegRecoveryUI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Mec\\Downloads\\file_carver\\file_carver\\tool\\src\\JpegRecoveryLibrary\\JpegRecoveryLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mec\\Downloads\\file_carver\\file_carver\\tool\\src\\JpegRecoveryLibrary\\JpegRecoveryLibrary.csproj",
+        "projectName": "JpegRecoveryLibrary",
+        "projectPath": "C:\\Users\\Mec\\Downloads\\file_carver\\file_carver\\tool\\src\\JpegRecoveryLibrary\\JpegRecoveryLibrary.csproj",
+        "packagesPath": "C:\\Users\\Mec\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mec\\Downloads\\file_carver\\file_carver\\tool\\src\\JpegRecoveryLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mec\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "MathNet.Numerics": {
+              "target": "Package",
+              "version": "[4.12.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "packetnet-connections": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Mec\\Downloads\\file_carver\\file_carver\\tool\\src\\JpegRecoveryUI\\JpegRecoveryUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mec\\Downloads\\file_carver\\file_carver\\tool\\src\\JpegRecoveryUI\\JpegRecoveryUI.csproj",
+        "projectName": "JpegRecoveryUI",
+        "projectPath": "C:\\Users\\Mec\\Downloads\\file_carver\\file_carver\\tool\\src\\JpegRecoveryUI\\JpegRecoveryUI.csproj",
+        "packagesPath": "C:\\Users\\Mec\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mec\\Downloads\\file_carver\\file_carver\\tool\\src\\JpegRecoveryUI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mec\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Mec\\Downloads\\file_carver\\file_carver\\tool\\src\\JpegRecoveryLibrary\\JpegRecoveryLibrary.csproj": {
+                "projectPath": "C:\\Users\\Mec\\Downloads\\file_carver\\file_carver\\tool\\src\\JpegRecoveryLibrary\\JpegRecoveryLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Avalonia": {
+              "target": "Package",
+              "version": "[0.9.10, )"
+            },
+            "Avalonia.Desktop": {
+              "target": "Package",
+              "version": "[0.9.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

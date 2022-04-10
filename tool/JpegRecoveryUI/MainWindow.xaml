@@ -1,0 +1,113 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="JpegRecoveryUI.MainWindow"
+        Title="Recovery Window">
+
+	<Window.Styles>
+		<Style Selector="TextBlock.b">
+			<Setter Property="FontWeight" Value="Bold"/>
+			<Setter Property="FontSize" Value="24"/>
+		</Style>
+		<Style Selector="TextBlock.b1">
+			<Setter Property="FontWeight" Value="Bold"/>
+			<Setter Property="FontSize" Value="12"/>
+		</Style>
+	</Window.Styles>
+
+	<Border Background="LightBlue"
+        BorderBrush="Black"
+        BorderThickness="2"
+        CornerRadius="45"
+        Padding="25">
+		<Grid Background="White" ShowGridLines="False">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="Auto"/>
+			</Grid.ColumnDefinitions>
+			
+			
+			<TextBlock Grid.Column="0" Grid.Row="0" Classes="b" Text="File Scraper" Margin="10,0,0,0"/>
+
+
+			<StackPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Name="StackPanel_left" 
+						VerticalAlignment="Center" Margin="15 0 0 0" Spacing="5">
+
+				<TextBlock Grid.Column="0" Grid.Row="0" Classes="b1" Text="Select file type:"/>
+					<CheckBox Name="videoCheckBox" Grid.Column="0" Grid.Row="1"  
+					   Content="Video"  IsChecked="True">   
+					</CheckBox>  
+					<CheckBox Name="jpegCheckBox" Grid.Column="0" Grid.Row="1" Margin="100,-25,0,0" 
+					   Content="JPEG"  IsChecked="False">   
+					</CheckBox>  
+
+
+				<TextBlock Grid.Column="0" Grid.Row="2" Classes="b1" Text="Select mode of operation:"/>
+				<!--
+					<ComboBox x:Name="optComboBox" Grid.Row="3" SelectedIndex="0">
+						<ComboBoxItem>Jpeg Carving(Single image)</ComboBoxItem>
+						<ComboBoxItem>Storage Carving</ComboBoxItem>
+						<ComboBoxItem>Packet Carving</ComboBoxItem>
+						<ComboBoxItem>Check if file fragment contains Jpeg</ComboBoxItem>
+						<ComboBoxItem>Video Carving</ComboBoxItem>
+					</ComboBox>-->
+					<ComboBox x:Name="optComboBox" Grid.Row="3" SelectedIndex="0">
+						<ComboBoxItem>Single File Carving</ComboBoxItem>
+						<ComboBoxItem>Storage Carving</ComboBoxItem>
+						<ComboBoxItem>Packet Carving</ComboBoxItem>
+					</ComboBox>
+
+
+					<TextBlock Text="Input path" Classes="b1" Margin="0,10,0,0"/>
+					<TextBox Grid.Row="4" Text="{Binding Path}" MaxWidth="350" Margin="0 0 0 0" IsReadOnly="True" />
+
+					<!--<TextBlock Text="Output path" Classes="b1" Margin="0,10,0,0"/>
+					<TextBox Grid.Row="3" Text="{Binding Path}" MaxWidth="350" Margin="0 0 0 0" IsReadOnly="True" />-->
+				
+					<Button Name="browseBtn" Grid.Row="5" Classes="Primary" Content="Browse" Click="Browse_Clicked" Margin="0 0 0 0" />
+
+					<ProgressBar Name="progress" Background="LightGray" Margin="0 15 0 0" IsVisible="True" ></ProgressBar>
+
+					<Button Name="runBtn" Grid.Row="7" Classes="Primary" Click="Run_Clicked" Margin="0 15 0 0">Run</Button>
+
+					<TextBlock Name="result" TextAlignment="Center" MaxWidth="350" />
+				
+				
+			</StackPanel>
+
+			<StackPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="Stretch" Name="StackPanel_right"
+						VerticalAlignment="Top" Orientation="Vertical" Spacing="10" Margin="5 0 0 0">
+
+				<Grid HorizontalAlignment="Center">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*" />
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+
+					<!--<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="158" />
+					</Grid.ColumnDefinitions>-->
+
+					<TextBlock HorizontalAlignment="Center" Classes="b1" Grid.Row="0" Margin="0 0 0 25" >Image Preview</TextBlock>
+
+					<Image Grid.Row="1" Name="drawingImage" VerticalAlignment="Center" MaxWidth="550" Source="{Binding Imagepath}" />
+
+				</Grid>
+
+				<!--<CheckBox Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" IsEnabled="False"> Is it jpeg? </CheckBox>-->	
+				
+			</StackPanel>
+
+		</Grid>
+	</Border>
+
+
+</Window>

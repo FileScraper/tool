@@ -1,0 +1,14 @@
+ffmpeg-python
+sklearn-json==0.1.0
+
+scikit-learn==0.21.3
+
+pandas==1.1.0
+
+numpy==1.21.1
+
+scipy==1.7.3
+
+nltk==3.6.7
+
+pillow
